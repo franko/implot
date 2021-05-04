@@ -187,11 +187,13 @@ void ShowDemoWindow(bool* p_open) {
     if (show_implot_metrics) {
         ImPlot::ShowMetricsWindow(&show_implot_metrics);
     }
+#if 0
     if (show_imgui_style_editor) {
         ImGui::Begin("Style Editor (ImGui)", &show_imgui_style_editor);
         ImGui::ShowStyleEditor();
         ImGui::End();
     }
+#endif
     if (show_implot_style_editor) {
         ImGui::SetNextWindowSize(ImVec2(415,762), ImGuiCond_Appearing);
         ImGui::Begin("Style Editor (ImPlot)", &show_implot_style_editor);
@@ -254,8 +256,10 @@ void ShowDemoWindow(bool* p_open) {
     }
     //-------------------------------------------------------------------------
     if (ImGui::CollapsingHeader("Configuration")) {
+#if 0
         ImGui::ShowFontSelector("Font");
         ImGui::ShowStyleSelector("ImGui Style");
+#endif
         ImPlot::ShowStyleSelector("ImPlot Style");
         ImPlot::ShowColormapSelector("ImPlot Colormap");
         float indent = ImGui::CalcItemWidth() - ImGui::GetFrameHeight();
