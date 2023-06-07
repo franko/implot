@@ -1,0 +1,6 @@
+CC="${CC:-gcc}"
+CXX="${CXX:-g++}"
+
+BUILD_TYPE="Release"
+
+packages=(freetype2 "sdl2 -opengl" "glad -loader" "imgui -freetype -opengl3 -sdl -largeidx")
