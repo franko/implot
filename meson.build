@@ -1,4 +1,4 @@
-project('implot', 'cpp')
+project('implot', 'cpp', default_options : ['cpp_std=c++17'])
 
 cc = meson.get_compiler('cpp')
 libm = cc.find_library('m', required : false)
